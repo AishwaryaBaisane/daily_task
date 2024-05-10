@@ -12,7 +12,7 @@ A new Flutter project.
   <img src= "https://github.com/AishwaryaBaisane/daily_task/assets/149373597/f7f84825-c1d6-4e68-afb0-c0074b3d111c" height = 25% width = 35%>
 </p>
 
-## Validation complate
+## Validation complete
 
 <p>
   <img src= "https://github.com/AishwaryaBaisane/daily_task/assets/149373597/d0cb55b6-cbfd-4b99-a56e-f7114f3684bc" height = 25% width = 35%>
