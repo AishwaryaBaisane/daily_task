@@ -46,6 +46,7 @@ class _Login2State extends State<Login2> {
                 Row(
                   children: [
                     Padding(
+
                       padding: EdgeInsets.only(right: 0, left: 20),
                       child: Text(
                         'Sign in',
@@ -67,7 +68,8 @@ class _Login2State extends State<Login2> {
                   children: [
                     Padding(
                       padding:
-                          EdgeInsets.only(right: 230, left: 10, bottom: 70),
+
+                      EdgeInsets.only(right: 230, left: 20, bottom: 70,top: 30),
                       child: Text(
                         'Use your Google Account',
                       ),
@@ -79,18 +81,17 @@ class _Login2State extends State<Login2> {
                           Padding(
                             padding: EdgeInsets.only(),
                             child: SizedBox(
-                              height: 50,
+                              height: 60,
                               width: 450,
                               child: TextFormField(
                                 controller: textPassword,
                                 keyboardType: TextInputType.number,
-                                obscureText: true,
-                                obscuringCharacter: '*',
+                                // obscureText: true,
                                 decoration: InputDecoration(
-                                  labelText: 'Password',
-                                  hintText: '1234@jgcd',
+                                  labelText: 'password',
+                                  hintText: '34d@#GCD',
                                   border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10),borderSide: BorderSide(color: Colors.black)
+                                      borderRadius: BorderRadius.circular(10),borderSide: BorderSide(color: Colors.black)
                                   ),
                                 ),
                                 onChanged: (value) {
@@ -102,7 +103,7 @@ class _Login2State extends State<Login2> {
                                   if (value!.isEmpty) {
                                     return 'field must be requird!';
                                   }
-                                   else if (value.length > 4) {
+                                  else if (value.length<=4) {
                                     return 'must be > 4';
                                   }
                                   // controller : controller,
@@ -114,12 +115,13 @@ class _Login2State extends State<Login2> {
                             children: [
                               Padding(
                                 padding: const EdgeInsets.only(
-                                    right: 330, bottom: 10),
+                                    right: 360, bottom: 10),
                                 child: Text(
                                   'Forgot password?',
-                                  style: TextStyle(color: Colors.blue),
+                                  style: TextStyle(color: Color(0xff0958cf),fontWeight: FontWeight.bold),
                                 ),
                               ),
+
                             ],
                           )
                         ],
@@ -137,7 +139,9 @@ class _Login2State extends State<Login2> {
                       ),
                       Text(
                         'Learn more',
-                        style: TextStyle(color: Colors.blueAccent),
+
+                        style: TextStyle(color: Color(0xff0958cf),fontWeight: FontWeight.bold),
+
                       ),
                     ],
                   ),
@@ -148,15 +152,17 @@ class _Login2State extends State<Login2> {
                     children: [
                       Text(
                         'Creat account',
-                        style: TextStyle(color: Colors.blueAccent),
+
+                        style: TextStyle(color: Color(0xff0958cf),fontWeight: FontWeight.bold),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 50),
                         child: OutlinedButton(
                           onPressed: () {
-                            bool res = Formkey.currentState!.validate();
+                            bool res = Formkey1.currentState!.validate();
                             if (res) {
-                              email = textEmail.text;
+                              password = textPassword.text;
+
                               Navigator.of(context).pushNamed('/home',arguments: email);
 
                             }
@@ -170,11 +176,9 @@ class _Login2State extends State<Login2> {
                                   borderRadius: BorderRadius.circular(25)),
                               child: Center(
                                   child: Text(
-                                'Next',
-                                style: TextStyle(
-                                  color: Colors.blueAccent,
-                                ),
-                              )),
+                                    'Next',
+                                    style: TextStyle( color: Colors.blueAccent,),
+                                  )),
                             ),
                           ),
                         ),
