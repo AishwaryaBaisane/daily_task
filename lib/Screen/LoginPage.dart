@@ -101,12 +101,11 @@ class _LoginpageState extends State<Loginpage> {
                                   if (value!.isEmpty) {
                                     return 'field must be requird!';
                                   }
-                                  else if(value.characters!='@gmail.com')
-
+                                  else if(!value.contains('@gmail.com'))
                                     {
-                                      return 'Enter @ !';
+                                      return 'Enter @gmail.com !';
                                     }
-                                   else if (value.length! < 4) {
+                                   else if (value.length< 4) {
                                     return 'must be > 4';
                                   }
                                   // controller : controller,
