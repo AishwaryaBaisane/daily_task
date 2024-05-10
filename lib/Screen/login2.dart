@@ -102,9 +102,9 @@ class _Login2State extends State<Login2> {
                                   if (value!.isEmpty) {
                                     return 'field must be requird!';
                                   }
-                                  //  else if (value.length > 4) {
-                                  //   return 'must be > 4';
-                                  // }
+                                   else if (value.length > 4) {
+                                    return 'must be > 4';
+                                  }
                                   // controller : controller,
                                 },
                               ),
@@ -157,8 +157,8 @@ class _Login2State extends State<Login2> {
                             bool res = Formkey.currentState!.validate();
                             if (res) {
                               email = textEmail.text;
-                              // password = textPassword.text;
-                              Navigator.of(context).pushNamed('/home');
+                              Navigator.of(context).pushNamed('/home',arguments: email);
+
                             }
                           },
                           child: Padding(
@@ -192,23 +192,3 @@ class _Login2State extends State<Login2> {
 }
 
 String password = 'Enter password';
-// import 'package:flutter/material.dart';
-// class showscreen extends StatefulWidget {
-//   final String email;
-//   final String password;
-//
-//   const showscreen({Key? key, required this.email, required this.password})
-//       : super(key: key);
-//
-//
-//   @override
-//   State<showscreen> createState() => _showscreenState();
-// }
-//
-// class _showscreenState extends State<showscreen> {
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold();
-//   }
-// }
