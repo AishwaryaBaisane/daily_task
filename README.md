@@ -2,15 +2,19 @@
 
 A new Flutter project.
 
-## Getting Started
+## Gamil
+<p>
+  <img src= "https://github.com/AishwaryaBaisane/daily_task/assets/149373597/c40b206f-4662-4ae0-9857-b8227b242990" height = 25% width = 35%>
+</p>
 
-This project is a starting point for a Flutter application.
+##  Password
+<p>
+  <img src= "https://github.com/AishwaryaBaisane/daily_task/assets/149373597/f7f84825-c1d6-4e68-afb0-c0074b3d111c" height = 25% width = 35%>
+</p>
 
-A few resources to get you started if this is your first Flutter project:
+## Validation complate
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<p>
+  <img src= "https://github.com/AishwaryaBaisane/daily_task/assets/149373597/d0cb55b6-cbfd-4b99-a56e-f7114f3684bc" height = 25% width = 35%>
+</p>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
