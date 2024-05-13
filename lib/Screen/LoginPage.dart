@@ -7,7 +7,7 @@ class Loginpage extends StatefulWidget {
   State<Loginpage> createState() => _LoginpageState();
 }
 
-GlobalKey<FormState> Formkey = GlobalKey();
+GlobalKey<FormState> formKey = GlobalKey();
 TextEditingController textEmail = TextEditingController();
 // TextEditingController textPassword = TextEditingController();
 
@@ -17,7 +17,7 @@ class _LoginpageState extends State<Loginpage> {
     return Scaffold(
       backgroundColor: Color(0xfff0f3f8),
       body: Form(
-        key: Formkey,
+        key: formKey,
         child: Center(
           child: Container(
             height: 350,
@@ -42,38 +42,17 @@ class _LoginpageState extends State<Loginpage> {
                   ),
                 ),
                 Row(
+                  // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Padding(
-
-                      padding: EdgeInsets.only(right: 0, left: 20),
+                      padding: EdgeInsets.only(left: 20, right: 300, top: 10),
                       child: Text(
                         'Sign in',
                         style: TextStyle(color: Colors.black, fontSize: 30),
                       ),
                     ),
-                    Column(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(
-                            left: 300,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
                     Padding(
-                      padding:
-
-                          EdgeInsets.only(right: 230, left: 20, bottom: 70,top: 30),
-                      child: Text(
-                        'Use your Google Account',
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(bottom: 20),
+                      padding: EdgeInsets.only(top: 20),
                       child: Column(
                         children: [
                           Padding(
@@ -84,13 +63,13 @@ class _LoginpageState extends State<Loginpage> {
                               child: TextFormField(
                                 controller: textEmail,
                                 keyboardType: TextInputType.number,
-                                // obscureText: true,
                                 decoration: InputDecoration(
                                   labelText: 'E-mail',
                                   hintText: 'Admin@gmail.com',
                                   border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(10),borderSide: BorderSide(color: Colors.black)
-                                  ),
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide:
+                                          BorderSide(color: Colors.black)),
                                 ),
                                 onChanged: (value) {
                                   setState(() {
@@ -99,13 +78,10 @@ class _LoginpageState extends State<Loginpage> {
                                 },
                                 validator: (value) {
                                   if (value!.isEmpty) {
-                                    return 'field must be requird!';
-                                  }
-                                  else if(!value.contains('@gmail.com'))
-                                    {
-                                      return 'Enter @gmail.com !';
-                                    }
-                                   else if (value.length< 4) {
+                                    return 'field must be required!';
+                                  } else if (!value.contains('@gmail.com')) {
+                                    return 'Enter @gmail.com !';
+                                  } else if (value.length < 4) {
                                     return 'must be > 4';
                                   }
                                   // controller : controller,
@@ -113,26 +89,31 @@ class _LoginpageState extends State<Loginpage> {
                               ),
                             ),
                           ),
-                          Row(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                    right: 360, bottom: 10),
-                                child: Text(
-                                  'Forgot email?',
-                         style: TextStyle(color: Color(0xff0958cf),fontWeight: FontWeight.bold),
-                                ),
-                              ),
-
-                            ],
-                          )
                         ],
                       ),
                     ),
                   ],
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15),
+                      child: Text(' Use your google account'),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 400),
+                      child: Text(
+                        ' Forgot email?',
+                        style: TextStyle(
+                            color: Color(0xff0958cf),
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ],
+                ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 410, top: 0),
+                  padding: const EdgeInsets.only(left: 410, top: 90),
                   child: Row(
                     children: [
                       Text(
@@ -141,9 +122,9 @@ class _LoginpageState extends State<Loginpage> {
                       ),
                       Text(
                         'Learn more',
-
-                        style: TextStyle(color: Color(0xff0958cf),fontWeight: FontWeight.bold),
-
+                        style: TextStyle(
+                            color: Color(0xff0958cf),
+                            fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
@@ -153,33 +134,43 @@ class _LoginpageState extends State<Loginpage> {
                   child: Row(
                     children: [
                       Text(
-                        'Creat account',
-
-                        style: TextStyle(color: Color(0xff0958cf),fontWeight: FontWeight.bold),
+                        'Create account',
+                        style: TextStyle(
+                            color: Color(0xff0958cf),
+                            fontWeight: FontWeight.bold),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 50),
                         child: OutlinedButton(
                           onPressed: () {
-                            bool res = Formkey.currentState!.validate();
+                            bool res = formKey.currentState!.validate();
                             if (res) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(content: Text('Success fully create email !!'))
+                              );
                               email = textEmail.text;
-
-                              Navigator.of(context).pushNamed('/login',arguments: email);
-
+                              Navigator.of(context)
+                                  .pushNamed('/login', arguments: email);
                             }
+                            else
+                              {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(content: Text('Required maile format !!'))
+                                );
+                              }
                           },
                           child: Padding(
                             padding: const EdgeInsets.only(left: 0),
                             child: Container(
-                              // height: 35,
-                              // width: 80,
+
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(25)),
                               child: Center(
                                   child: Text(
                                 'Next',
-                                style: TextStyle( color: Colors.blueAccent,),
+                                style: TextStyle(
+                                  color: Colors.blueAccent,
+                                ),
                               )),
                             ),
                           ),
@@ -187,7 +178,7 @@ class _LoginpageState extends State<Loginpage> {
                       ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
           ),

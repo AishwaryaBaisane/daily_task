@@ -9,7 +9,7 @@ class Login2 extends StatefulWidget {
   State<Login2> createState() => _Login2State();
 }
 
-GlobalKey<FormState> Formkey1 = GlobalKey();
+GlobalKey<FormState> formKey = GlobalKey();
 // TextEditingController textEmail = TextEditingController();
 TextEditingController textPassword = TextEditingController();
 
@@ -19,7 +19,7 @@ class _Login2State extends State<Login2> {
     return Scaffold(
       backgroundColor: Color(0xfff0f3f8),
       body: Form(
-        key: Formkey1,
+        key: formKey,
         child: Center(
           child: Container(
             height: 350,
@@ -44,38 +44,17 @@ class _Login2State extends State<Login2> {
                   ),
                 ),
                 Row(
+                  // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Padding(
-
-                      padding: EdgeInsets.only(right: 0, left: 20),
+                      padding: EdgeInsets.only(left: 20, right: 300, top: 10),
                       child: Text(
-                        'Sign in',
-                        style: TextStyle(color: Colors.black, fontSize: 30),
-                      ),
-                    ),
-                    Column(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(
-                            left: 300,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Padding(
-                      padding:
-
-                      EdgeInsets.only(right: 230, left: 20, bottom: 70,top: 30),
-                      child: Text(
-                        'Use your Google Account',
+                        'Welcome',
+                        style: TextStyle(color: Colors.black, fontSize: 20),
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(bottom: 20),
+                      padding: EdgeInsets.only(top: 20),
                       child: Column(
                         children: [
                           Padding(
@@ -86,12 +65,12 @@ class _Login2State extends State<Login2> {
                               child: TextFormField(
                                 controller: textPassword,
                                 keyboardType: TextInputType.number,
-                                // obscureText: true,
                                 decoration: InputDecoration(
-                                  labelText: 'password',
-                                  hintText: '34d@#GCD',
+                                  labelText: 'Password',
+                                  hintText: 'Aisha@23',
                                   border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(10),borderSide: BorderSide(color: Colors.black)
+                                    borderRadius: BorderRadius.circular(10),
+                                    borderSide: BorderSide(color: Colors.black),
                                   ),
                                 ),
                                 onChanged: (value) {
@@ -101,36 +80,42 @@ class _Login2State extends State<Login2> {
                                 },
                                 validator: (value) {
                                   if (value!.isEmpty) {
-                                    return 'field must be requird!';
-                                  }
-                                  else if (value.length<=4) {
+                                    return 'field must be required!';
+                                  } else if (value.length < 4) {
                                     return 'must be > 4';
                                   }
-                                  // controller : controller,
                                 },
                               ),
                             ),
                           ),
-                          Row(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                    right: 360, bottom: 10),
-                                child: Text(
-                                  'Forgot password?',
-                                  style: TextStyle(color: Color(0xff0958cf),fontWeight: FontWeight.bold),
-                                ),
-                              ),
-
-                            ],
-                          )
                         ],
                       ),
                     ),
                   ],
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15),
+                      child: Text(
+                        '$email',
+                        style: TextStyle(color: Colors.deepOrange),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 380),
+                      child: Text(
+                        ' Forgot password?',
+                        style: TextStyle(
+                            color: Color(0xff0958cf),
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ],
+                ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 410, top: 0),
+                  padding: const EdgeInsets.only(left: 410, top: 90),
                   child: Row(
                     children: [
                       Text(
@@ -139,9 +124,9 @@ class _Login2State extends State<Login2> {
                       ),
                       Text(
                         'Learn more',
-
-                        style: TextStyle(color: Color(0xff0958cf),fontWeight: FontWeight.bold),
-
+                        style: TextStyle(
+                            color: Color(0xff0958cf),
+                            fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
@@ -151,41 +136,46 @@ class _Login2State extends State<Login2> {
                   child: Row(
                     children: [
                       Text(
-                        'Creat account',
-
-                        style: TextStyle(color: Color(0xff0958cf),fontWeight: FontWeight.bold),
+                        'Create account',
+                        style: TextStyle(
+                            color: Color(0xff0958cf),
+                            fontWeight: FontWeight.bold),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 50),
                         child: OutlinedButton(
                           onPressed: () {
-                            bool res = Formkey1.currentState!.validate();
+                            bool res = formKey.currentState!.validate();
                             if (res) {
+                              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Success fully create password !!')));
                               password = textPassword.text;
-
-                              Navigator.of(context).pushNamed('/home',arguments: email);
-
+                              Navigator.of(context)
+                                  .pushNamed('/home', arguments: email);
                             }
+                            else
+                              {
+                                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Required password format !!'),));
+                              }
                           },
                           child: Padding(
                             padding: const EdgeInsets.only(left: 0),
                             child: Container(
-                              // height: 35,
-                              // width: 80,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(25)),
                               child: Center(
                                   child: Text(
-                                    'Next',
-                                    style: TextStyle( color: Colors.blueAccent,),
-                                  )),
+                                'Next',
+                                style: TextStyle(
+                                  color: Colors.blueAccent,
+                                ),
+                              )),
                             ),
                           ),
                         ),
                       ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
           ),

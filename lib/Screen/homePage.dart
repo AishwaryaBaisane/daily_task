@@ -11,14 +11,14 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-GlobalKey<FormState> Formkey2 = GlobalKey();
+GlobalKey<FormState> formKey = GlobalKey();
 
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: Color(0xfff0f3f8),
         body: Form(
-          key: Formkey2,
+          key: formKey,
           child: Center(
             child: Container(
               height: 350,
@@ -41,26 +41,26 @@ class _HomePageState extends State<HomePage> {
                         ),
                         Text(
                           'o',
-                          style: TextStyle(color: Colors.red, fontSize: 40),
+                          style: TextStyle(color: Colors.red, fontSize: 50),
                         ),
                         Text(
                           'o',
                           style: TextStyle(
-                              color: Colors.amberAccent, fontSize: 40),
+                              color: Colors.amberAccent, fontSize: 50),
                         ),
                         Text(
                           'g',
                           style:
-                          TextStyle(color: Colors.blueAccent, fontSize: 40),
+                          TextStyle(color: Colors.blueAccent, fontSize: 50),
                         ),
                         Text(
                           'l',
                           style:
-                          TextStyle(color: Colors.blueAccent, fontSize: 40),
+                          TextStyle(color: Colors.blueAccent, fontSize: 50),
                         ),
                         Text(
                           'e',
-                          style: TextStyle(color: Colors.red, fontSize: 40),
+                          style: TextStyle(color: Colors.red, fontSize: 50),
                         )
                       ],
                     ),
@@ -96,14 +96,14 @@ class _HomePageState extends State<HomePage> {
                   Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(left: 120, top: 80),
+                        padding: const EdgeInsets.only(left: 120, top: 70),
                         child: Text(
                           'Update password',
                           style: TextStyle(color: Color(0xff0958cf)),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 120, top: 80),
+                        padding: const EdgeInsets.only(left: 120, top: 70),
                         child: Container(
                           height: 40,
                           width: 120,
