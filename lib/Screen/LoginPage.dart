@@ -63,12 +63,20 @@ class _LoginpageState extends State<Loginpage> {
                                 controller: textEmail,
                                 keyboardType: TextInputType.number,
                                 decoration: InputDecoration(
+                                  fillColor: Colors.black,
                                   labelText: 'E-mail',
                                   hintText: 'Admin@gmail.com',
                                   border: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(10),
                                       borderSide:
                                           BorderSide(color: Colors.black)),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                    borderSide: const BorderSide(
+                                      color: Colors.black45,
+                                      width: 2,
+                                    ),
+                                  ),
                                 ),
                                 onChanged: (value) {
                                   setState(() {
@@ -76,14 +84,44 @@ class _LoginpageState extends State<Loginpage> {
                                   });
                                 },
                                 validator: (value) {
+                                  bool capital = false;
+                                  bool space = false;
+                                  bool space1 = false;
                                   if (value!.isEmpty) {
                                     return 'field must be required!';
                                   } else if (!value.contains('@gmail.com')) {
                                     return 'Enter @gmail.com !';
-                                  } else if (value.length < 4) {
-                                    return 'must be > 4';
+                                  } else if (value.length <= 10) {
+                                    return 'Enter valid E-mail';
                                   }
-                                  // controller : controller,
+                                  for (int i = 0; i < value.length; i++) {
+                                    if (value[i] != value[i].toLowerCase()) {
+                                      capital = true;
+                                    }
+                                  }
+                                  if (capital) {
+                                    return 'Capital latter not allowed !!';
+                                  }
+                                  for (int i = 0; i < value.length; i++) {
+                                    int char = value.codeUnitAt(i);
+                                    if ((char > 32 && char <= 45) ||
+                                        (char >= 58 && char <= 63) ||
+                                        (char >= 91 && char <= 96) ||
+                                        (char >= 123 && char <= 126) ||
+                                        (char == 47)) {
+                                      space = true;
+                                    }
+                                    if (char == 32) {
+                                      space1 = true;
+                                    }
+                                  }
+                                  if (space) {
+                                    return 'Spacial character are not allowed !!';
+                                  }
+                                  if (space1) {
+                                    return 'Space are not allowed !!';
+                                  }
+                                  return null;
                                 },
                               ),
                             ),

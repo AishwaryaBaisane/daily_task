@@ -48,7 +48,7 @@ class _Login2State extends State<Login2> {
                     Padding(
                       padding: EdgeInsets.only(left: 20, right: 300, top: 10),
                       child: Text(
-                        'Welcome',
+                        'Hi User',
                         style: TextStyle(color: Colors.black, fontSize: 20),
                       ),
                     ),
@@ -68,8 +68,16 @@ class _Login2State extends State<Login2> {
                                   labelText: 'Password',
                                   hintText: 'Aisha@23',
                                   border: OutlineInputBorder(
+                                    borderSide: const BorderSide(
+                                        color: Colors.black, width: 1),
                                     borderRadius: BorderRadius.circular(10),
-                                    borderSide: BorderSide(color: Colors.black),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(8),
+                                    borderSide: const BorderSide(
+                                      color: Color(0xFF0B57D0),
+                                      width: 1.8,
+                                    ),
                                   ),
                                 ),
                                 onChanged: (value) {
@@ -78,11 +86,60 @@ class _Login2State extends State<Login2> {
                                   });
                                 },
                                 validator: (value) {
+                                  bool capital = false;
+                                  bool small = false;
+                                  bool charctor = false;
+                                  bool space1 = false;
+                                  bool digit = false;
                                   if (value!.isEmpty) {
                                     return 'field must be required!';
-                                  } else if (value.length < 4) {
-                                    return 'must be > 4';
+                                  }  else if (value.length <= 8) {
+                                    return 'Password must be greater than 8 !!';
                                   }
+                                  for (int i = 0; i < value.length; i++) {
+                                    if (value[i] != value[i].toLowerCase()) {
+                                      capital = true;
+                                    }
+                                    if (value[i] == value[i].toLowerCase()) {
+                                      small = true;
+                                    }
+                                  }
+                                  if (!capital) {
+                                    return ' Enter minimum 1 Capital latter !!';
+                                  }
+                                  if(!small)
+                                    {
+                                      return ' Enter minimum 1 Small latter !!';
+                                    }
+                                  for (int i = 0; i < value.length; i++) {
+                                    int char = value.codeUnitAt(i);
+                                    if ((char >= 33 && char <= 45) ||
+                                        (char >= 58 && char <= 64) ||
+                                        (char >= 91 && char <= 96) ||
+                                        (char >= 123 && char <= 126) ||
+                                        (char == 47)) {
+                                      charctor = true;
+                                    }
+                                    if (char == 32) {
+                                      space1 = true;
+                                    }
+                                    if((char>=48 && char<=57))
+                                      {
+                                        digit = true;
+
+                                      }
+                                  }
+                                  if (!charctor) {
+                                    return 'Enter minimum 1 Spacial character  !!';
+                                  }
+                                  if (space1) {
+                                    return 'Space are not allowed !!';
+                                  }
+                                  if(!digit)
+                                    {
+                                      return 'Enter minimum 1 digit !!';
+                                    }
+                                  return null;
                                 },
                               ),
                             ),
