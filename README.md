@@ -292,14 +292,14 @@ class AppRouts{
 
 A new Flutter project.
 
-## Gamil
+## Gamil :
 
 <p>
    <img src= "https://github.com/AishwaryaBaisane/daily_task/assets/149373597/91736fe5-b90d-43d8-9b68-fae3716df722)" height = 25% width = 35%>
   <img src= "https://github.com/AishwaryaBaisane/daily_task/assets/149373597/8a11366c-7fbe-40bf-aef4-d99a332de62d" height = 25% width = 35%>
 </p>
 
-##  Password
+##  Password :
 
 <p>
  <img src= "https://github.com/AishwaryaBaisane/daily_task/assets/149373597/cd6570d9-03bd-4153-a88e-80d58e5a72b4" height = 25% width = 35%>
@@ -307,7 +307,7 @@ A new Flutter project.
 </p>
 
 
-## Validation complete
+## Validation complete :
 
 <p>
    <img src= "https://github.com/AishwaryaBaisane/daily_task/assets/149373597/e1e59de9-6b1f-4e8b-9947-224307ccbabf" height = 25% width = 35%>
