@@ -93,7 +93,7 @@ class _Login2State extends State<Login2> {
                                   bool digit = false;
                                   if (value!.isEmpty) {
                                     return 'field must be required!';
-                                  }  else if (value.length <= 8) {
+                                  } else if (value.length <= 8) {
                                     return 'Password must be greater than 8 !!';
                                   }
                                   for (int i = 0; i < value.length; i++) {
@@ -107,10 +107,9 @@ class _Login2State extends State<Login2> {
                                   if (!capital) {
                                     return ' Enter minimum 1 Capital latter !!';
                                   }
-                                  if(!small)
-                                    {
-                                      return ' Enter minimum 1 Small latter !!';
-                                    }
+                                  if (!small) {
+                                    return ' Enter minimum 1 Small latter !!';
+                                  }
                                   for (int i = 0; i < value.length; i++) {
                                     int char = value.codeUnitAt(i);
                                     if ((char >= 33 && char <= 45) ||
@@ -123,11 +122,9 @@ class _Login2State extends State<Login2> {
                                     if (char == 32) {
                                       space1 = true;
                                     }
-                                    if((char>=48 && char<=57))
-                                      {
-                                        digit = true;
-
-                                      }
+                                    if ((char >= 48 && char <= 57)) {
+                                      digit = true;
+                                    }
                                   }
                                   if (!charctor) {
                                     return 'Enter minimum 1 Spacial character  !!';
@@ -135,10 +132,9 @@ class _Login2State extends State<Login2> {
                                   if (space1) {
                                     return 'Space are not allowed !!';
                                   }
-                                  if(!digit)
-                                    {
-                                      return 'Enter minimum 1 digit !!';
-                                    }
+                                  if (!digit) {
+                                    return 'Enter minimum 1 digit !!';
+                                  }
                                   return null;
                                 },
                               ),
