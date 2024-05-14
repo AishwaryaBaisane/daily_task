@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'LoginPage.dart';
 
 class Login2 extends StatefulWidget {
@@ -97,11 +96,29 @@ class _Login2State extends State<Login2> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(left: 15),
-                      child: Text(
-                        '$email',
-                        style: TextStyle(color: Colors.deepOrange),
-                      ),
+                      padding: const EdgeInsets.only(left: 10),
+                      child: Container(
+                          height: 30,
+                          width: 160,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(15),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.black26,
+                                    blurRadius: 1,
+                                    spreadRadius: 1)
+                              ]),
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 4),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text('$email'),
+                                Icon(Icons.arrow_drop_down),
+                              ],
+                            ),
+                          )),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 380),
@@ -147,15 +164,25 @@ class _Login2State extends State<Login2> {
                           onPressed: () {
                             bool res = formKey.currentState!.validate();
                             if (res) {
-                              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Success fully create password !!')));
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                      content: Text(
+                                          'Password created Successfully !!')));
                               password = textPassword.text;
                               Navigator.of(context)
                                   .pushNamed('/home', arguments: email);
+                            } else {
+                              ScaffoldMessenger.of(context)
+                                  .showSnackBar(SnackBar(
+                                action: SnackBarAction(
+                                  label: 'Refresh',
+                                  onPressed: () {
+                                    formKey.currentState!.reset();
+                                  },
+                                ),
+                                content: Text('Required password format !!'),
+                              ));
                             }
-                            else
-                              {
-                                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Required password format !!'),));
-                              }
                           },
                           child: Padding(
                             padding: const EdgeInsets.only(left: 0),

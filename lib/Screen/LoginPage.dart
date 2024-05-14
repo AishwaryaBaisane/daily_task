@@ -9,7 +9,6 @@ class Loginpage extends StatefulWidget {
 
 GlobalKey<FormState> formKey = GlobalKey();
 TextEditingController textEmail = TextEditingController();
-// TextEditingController textPassword = TextEditingController();
 
 class _LoginpageState extends State<Loginpage> {
   @override
@@ -146,23 +145,30 @@ class _LoginpageState extends State<Loginpage> {
                             bool res = formKey.currentState!.validate();
                             if (res) {
                               ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(content: Text('Success fully create email !!'))
+                                SnackBar(
+                                  content:
+                                      Text('E-mail created Successfully !!'),
+                                ),
                               );
                               email = textEmail.text;
                               Navigator.of(context)
                                   .pushNamed('/login', arguments: email);
+                            } else {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                      action: SnackBarAction(
+                                        label: 'Refresh',
+                                        onPressed: () {
+                                          formKey.currentState!.reset();
+                                        },
+                                      ),
+                                      content:
+                                          Text('Required maile format !!')));
                             }
-                            else
-                              {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                    const SnackBar(content: Text('Required maile format !!'))
-                                );
-                              }
                           },
                           child: Padding(
                             padding: const EdgeInsets.only(left: 0),
                             child: Container(
-
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(25)),
                               child: Center(
