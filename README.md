@@ -318,7 +318,15 @@ A new Flutter project.
 </div>
 
 
+## Image Picker :
 
+<p>
+   <img src= "https://github.com/AishwaryaBaisane/daily_task/assets/149373597/c4f1b4e7-b381-4ac4-affe-efccf6e2b826" height = 25% width = 35%>
+</p>
+
+<div align = "center">
+  <video src = "https://github.com/AishwaryaBaisane/daily_task/assets/149373597/e3b29661-ea6d-418d-a212-c7b8c22e9bc0"></video>
+</div>
 
 
 
