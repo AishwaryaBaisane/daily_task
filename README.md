@@ -292,7 +292,11 @@ class AppRouts{
 </div>
 </p>
 
+## Drawer :
 
+<p>
+   <img src= "https://github.com/AishwaryaBaisane/daily_task/assets/149373597/db563359-ebac-4f5f-9f92-e12c6c0d3d32)" height = 25% width = 35%>
+</p>
 
 
 # Google Login page :
