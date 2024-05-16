@@ -3,8 +3,6 @@
 import 'package:flutter/material.dart';
 
 List icon = [
-  Icons.all_inbox,
-  Icons.sell_outlined,
   Icons.person,
   Icons.star_border,
   Icons.snooze,
@@ -17,8 +15,6 @@ List icon = [
 ];
 
 List txt = [
-  'Primary',
-  'Promotions',
   'Social',
   'Starred',
   'Snoozed',

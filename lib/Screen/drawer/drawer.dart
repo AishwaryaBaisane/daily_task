@@ -20,18 +20,18 @@ class _DrawerPageState extends State<DrawerPage> {
             SystemUiOverlayStyle(statusBarColor: Colors.black26),
         backgroundColor: Color(0xff121315),
       ),
-      backgroundColor: Color(0xff121315),
+      backgroundColor: Colors.white,
       drawer: Drawer(
-        backgroundColor: Color(0xff2e2f33),
+        backgroundColor: Color(0xff303038),
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Padding(
-            padding: const EdgeInsets.all(15),
+            padding: const EdgeInsets.all(0),
             child: Column(
               // mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(right: 180, top: 80),
+                  padding: const EdgeInsets.only(right: 190, top: 60),
                   child: Text(
                     'Gmail',
                     style: TextStyle(
@@ -40,9 +40,39 @@ class _DrawerPageState extends State<DrawerPage> {
                     ),
                   ),
                 ),
+                SizedBox(height: 10,),
                 Divider(
                   thickness: 1,
                   color: Colors.white,
+                ),
+                ListTile(
+                  leading: Icon(
+                    Icons.all_inbox,
+                    color: Colors.white,
+                    size: 30,
+                  ),
+                  title: Text('Primary',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                      )),
+                ),
+                Divider(
+                  thickness: 1,
+
+                  color: Colors.white,
+                ),
+                ListTile(
+                  leading: Icon(
+                    Icons.sell_outlined,
+                    color: Colors.white,
+                    size: 30,
+                  ),
+                  title: Text('Promotions',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                      )),
                 ),
                 ...List.generate(
                   icon.length,
@@ -82,6 +112,10 @@ class _DrawerPageState extends State<DrawerPage> {
                         fontSize: 25,
                       )),
                 ),
+                Divider(
+                  thickness: 1,
+                  color: Colors.white,
+                ),
                 ListTile(
                   leading: Icon(
                     Icons.calendar_today_rounded,
@@ -93,6 +127,10 @@ class _DrawerPageState extends State<DrawerPage> {
                         color: Colors.white,
                         fontSize: 25,
                       )),
+                ),
+                Divider(
+                  thickness: 1,
+                  color: Colors.white,
                 ),
                 ListTile(
                   leading: Icon(
@@ -114,3 +152,8 @@ class _DrawerPageState extends State<DrawerPage> {
     );
   }
 }
+// Icons.all_inbox,
+// Icons.sell_outlined,
+//
+// 'Primary',
+// 'Promotions',

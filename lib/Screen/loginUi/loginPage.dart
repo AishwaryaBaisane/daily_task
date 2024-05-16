@@ -69,6 +69,7 @@ class _DataPageState extends State<DataPage> {
                         size: 25,
                       ),
                       labelText: 'E-mail',
+                      hintText: 'aisha@gmail.com',
                       labelStyle: TextStyle(color: Colors.black, fontSize: 20),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(6),
@@ -90,6 +91,7 @@ class _DataPageState extends State<DataPage> {
                 height: height * 0.1,
                 width: width * 0.85,
                 child: TextFormField(
+                  keyboardType: TextInputType.number,
                   decoration: InputDecoration(
                     prefixIcon: Icon(
                       Icons.fingerprint,
@@ -97,6 +99,7 @@ class _DataPageState extends State<DataPage> {
                       size: 25,
                     ),
                     labelText: 'Password',
+                    hintText: '123456789',
                     labelStyle: TextStyle(color: Colors.black, fontSize: 20),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(6),
@@ -115,7 +118,7 @@ class _DataPageState extends State<DataPage> {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 15,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 210),
@@ -123,6 +126,9 @@ class _DataPageState extends State<DataPage> {
                   'Forgot Password?',
                   style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold,fontSize: 17),
                 ),
+              ),
+              SizedBox(
+                height: 15,
               ),
               Container(
                 height: height * 0.07,
