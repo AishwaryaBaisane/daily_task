@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -41,14 +42,18 @@ class _LoginPageState extends State<LoginPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Container(
-                  height: 60,
-                  width: 180,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(9),
-                      color: Color(0xffffe502),
-                      border: Border.all(color: Colors.black54,width: 3)),
-                  child: Center(child: Text('LOGIN',style: TextStyle(fontSize: 19,fontWeight: FontWeight.bold),)),
+                GestureDetector(onTap: () {
+                  Navigator.of(context).pushNamed('/data');
+                },
+                  child: Container(
+                    height: 60,
+                    width: 180,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(9),
+                        color: Color(0xffffe502),
+                        border: Border.all(color: Colors.black54,width: 3)),
+                    child: Center(child: Text('LOGIN',style: TextStyle(fontSize: 19,fontWeight: FontWeight.bold),)),
+                  ),
                 ),
                 Container(
                   height: 60,

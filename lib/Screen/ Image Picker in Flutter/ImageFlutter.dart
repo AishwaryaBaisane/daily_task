@@ -24,7 +24,10 @@ class _ProfileState extends State<Profile> {
         backgroundColor: Color(0xff2196f3),
         title: Text(
           'Image Picker',
-          style: TextStyle(color: Colors.white, fontSize: 20,),
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 20,
+          ),
         ),
       ),
       body: Column(
@@ -86,13 +89,14 @@ class _ProfileState extends State<Profile> {
               borderRadius: BorderRadius.circular(5),
             ),
             child: Center(
-                child: Text(
-              'Upload Me',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold),
-            )),
+              child: Text(
+                'Upload Me',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
           )
         ],
       ),

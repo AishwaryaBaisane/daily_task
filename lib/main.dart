@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:task3/drawer/drawer.dart';
-import ' Image Picker in Flutter/ImageFlutter.dart';
+import 'Screen/ Image Picker in Flutter/ImageFlutter.dart';
 import 'Screen/LoginPage.dart';
+import 'Screen/drawer/drawer.dart';
 import 'Screen/homePage.dart';
 import 'Screen/login2.dart';
-import 'loginUi/firstPage.dart';
-import 'loginUi/loginPage.dart';
+import 'Screen/loginUi/firstPage.dart';
+import 'Screen/loginUi/loginPage.dart';
+
 
 void main()
 {
@@ -20,10 +21,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/dat': (context) => DrawerPage(),
+        '/drawer': (context) => DrawerPage(),
         '/profile': (context) => Profile(),
-        '/': (context) => DataPage(),
-        '/loGin': (context) => LoginPage(),
+        '/data': (context) => DataPage(),
+        '/': (context) => LoginPage(),
         '/Login': (context) => Loginpage(),
         '/login': (context) => Login2(),
         '/home': (context) => HomePage(),

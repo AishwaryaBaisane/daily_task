@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../global/List.dart';
+import '../../global/List.dart';
+
 
 class DrawerPage extends StatefulWidget {
   const DrawerPage({super.key});
