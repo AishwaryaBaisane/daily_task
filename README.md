@@ -283,12 +283,19 @@ class AppRouts{
 }
 
 ```
+## Login Page :
+<p>
+   <img src= "https://github.com/AishwaryaBaisane/daily_task/assets/149373597/1a0e19d6-0952-4298-b07d-3ef8bf54a853" height = 25% width = 35%>
+  <img src= "https://github.com/AishwaryaBaisane/daily_task/assets/149373597/9e5d4fed-8a86-4cd1-9fac-d274e05b6f18" height = 25% width = 35%>
+<div align = "center">
+  <video src = "https://github.com/AishwaryaBaisane/daily_task/assets/149373597/852508a9-0d5f-4b3f-9d71-9a3147467b4a"></video>
+</div>
+</p>
 
 
 
 
-
-# Login page
+# Google Login page :
 
 A new Flutter project.
 
