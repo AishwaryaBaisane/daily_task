@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task3/drawer/drawer.dart';
 import ' Image Picker in Flutter/ImageFlutter.dart';
 import 'Screen/LoginPage.dart';
 import 'Screen/homePage.dart';
@@ -19,8 +20,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => Profile(),
-        '/data': (context) => DataPage(),
+        '/dat': (context) => DrawerPage(),
+        '/profile': (context) => Profile(),
+        '/': (context) => DataPage(),
         '/loGin': (context) => LoginPage(),
         '/Login': (context) => Loginpage(),
         '/login': (context) => Login2(),

@@ -24,7 +24,7 @@ class _ProfileState extends State<Profile> {
         backgroundColor: Color(0xff2196f3),
         title: Text(
           'Image Picker',
-          style: TextStyle(color: Colors.white, fontSize: 20),
+          style: TextStyle(color: Colors.white, fontSize: 20,),
         ),
       ),
       body: Column(
@@ -34,7 +34,7 @@ class _ProfileState extends State<Profile> {
             height: 350,
             width: 350,
             decoration: BoxDecoration(
-              color: Color(0xffdfe4e7),
+              // color: Color(0xffdfe4e7),
               image: (fileImage != null)
                   ? DecorationImage(
                       fit: BoxFit.cover, image: FileImage(fileImage!))
