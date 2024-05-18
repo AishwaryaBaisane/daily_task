@@ -341,8 +341,8 @@ A new Flutter project.
 ## Registration & Id Card :
 
 <p>
-    <img src= "https://github.com/AishwaryaBaisane/daily_task/assets/149373597/a2f99bfc-c68e-418e-979c-204d0ae32854" height = 25% width = 35%>
-   <img src= "https://github.com/AishwaryaBaisane/daily_task/assets/149373597/3b4ef2c1-13dc-4c39-aa4e-e61509c7a2d5)" height = 25% width = 35%>
+    <img src= "https://github.com/AishwaryaBaisane/daily_task/assets/149373597/a2f99bfc-c68e-418e-979c-204d0ae32854" height = 20% width = 35%>
+   <img src= "https://github.com/AishwaryaBaisane/daily_task/assets/149373597/3b4ef2c1-13dc-4c39-aa4e-e61509c7a2d5)" height = 20% width = 35%>
 <div align = "center">
   <video src = "https://github.com/AishwaryaBaisane/daily_task/assets/149373597/9970d709-203f-47a9-919a-0e24a6cb2a3d"></video>
 </div>
@@ -352,7 +352,7 @@ A new Flutter project.
 
 
 <p>
-    <img src= "https://github.com/AishwaryaBaisane/daily_task/assets/149373597/cfe2e58f-e90e-4c9e-bd0a-82f8aa62a532" height = 25% width = 35%>
+    <img src= "https://github.com/AishwaryaBaisane/daily_task/assets/149373597/cfe2e58f-e90e-4c9e-bd0a-82f8aa62a532" height = 20% width = 35%>
 <div align = "center">
   <video src = "https://github.com/AishwaryaBaisane/daily_task/assets/149373597/bd7431f1-65fc-445a-a0f3-2e372ae85daa"></video>
 </div>
