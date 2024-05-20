@@ -221,4 +221,143 @@ class _Id_CardState extends State<Id_Card> {
         ));
   }
 }
-
+//Center(
+//         child: Column(
+//           children: [
+//             Image(
+//               image: FileImage(fileImage!),
+//               height: 200,
+//             ),
+//             SizedBox(
+//               height: 30,
+//             ),
+//             Text(
+//               '${txtName.text} ${txtSurname.text}',
+//               style: TextStyle(
+//                 color: Colors.black,
+//                 fontSize: 40,
+//                 fontWeight: FontWeight.bold,
+//               ),
+//             ),
+//             Padding(
+//               padding: const EdgeInsets.all(50),
+//               child: Column(
+//                 children: [
+//                   Row(
+//                     children: [
+//                       Text(
+//                         'ID No :\t\t\t ',
+//                         style: TextStyle(
+//                             color: Colors.black,
+//                             fontSize: 20,
+//                             fontWeight: FontWeight.bold),
+//                       ),
+//                       Text(
+//                         '607635',
+//                         style: TextStyle(color: Colors.black, fontSize: 20),
+//                       ),
+//                     ],
+//                   ),
+//                   SizedBox(
+//                     height: 20,
+//                   ),
+//                   Row(
+//                     children: [
+//                       Text(
+//                         'Gender :\t\t\t ',
+//                         style: TextStyle(
+//                             color: Colors.black,
+//                             fontSize: 20,
+//                             fontWeight: FontWeight.bold),
+//                       ),
+//                       Text(
+//                         '${gender.toString()}',
+//                         style: TextStyle(color: Colors.black, fontSize: 20),
+//                       ),
+//                     ],
+//                   ),
+//                   SizedBox(
+//                     height: 20,
+//                   ),
+//                   Row(
+//                     children: [
+//                       Text(
+//                         'State :\t\t\t ',
+//                         style: TextStyle(
+//                             color: Colors.black,
+//                             fontSize: 20,
+//                             fontWeight: FontWeight.bold),
+//                       ),
+//                       Text(
+//                         '${txtState.text}',
+//                         style: TextStyle(color: Colors.black, fontSize: 20),
+//                       ),
+//                     ],
+//                   ),
+//                   SizedBox(
+//                     height: 20,
+//                   ),
+//                   Row(
+//                     children: [
+//                       Text(
+//                         'Skill :\t\t\t ',
+//                         style: TextStyle(
+//                             color: Colors.black,
+//                             fontSize: 20,
+//                             fontWeight: FontWeight.bold),
+//                       ),
+//                       ...List.generate(
+//                         Hobby.length,
+//                         (index) => Row(
+//                           children: [
+//                             Text(
+//                               '${Hobby[index]},',
+//                               style: TextStyle(fontSize: 20),
+//                             ),
+//                           ],
+//                         ),
+//                       ),
+//                     ],
+//                   ),
+//                   SizedBox(
+//                     height: 20,
+//                   ),
+//                   Row(
+//                     children: [
+//                       Text(
+//                         'E-mail :\t\t\t ',
+//                         style: TextStyle(
+//                             color: Colors.black,
+//                             fontSize: 20,
+//                             fontWeight: FontWeight.bold),
+//                       ),
+//                       Text(
+//                         '${txtEmail.text}',
+//                         style: TextStyle(color: Colors.black, fontSize: 20),
+//                       ),
+//                     ],
+//                   ),
+//                   SizedBox(
+//                     height: 20,
+//                   ),
+//                   Row(
+//                     children: [
+//                       Text(
+//                         'Phone :\t\t\t ',
+//                         style: TextStyle(
+//                             color: Colors.black,
+//                             fontSize: 20,
+//                             fontWeight: FontWeight.bold),
+//                       ),
+//                       Text(
+//                         '+${txtNumber.text}',
+//                         style: TextStyle(color: Colors.black, fontSize: 20),
+//                       ),
+//                     ],
+//                   ),
+//                 ],
+//               ),
+//             )
+//           ],
+//         ),
+//       ),

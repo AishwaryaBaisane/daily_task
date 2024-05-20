@@ -37,7 +37,6 @@ class _ProfileState extends State<Profile> {
             height: 350,
             width: 350,
             decoration: BoxDecoration(
-              // color: Color(0xffdfe4e7),
               image: (fileImage != null)
                   ? DecorationImage(
                       fit: BoxFit.cover, image: FileImage(fileImage!))
